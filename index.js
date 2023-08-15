@@ -7,7 +7,7 @@ const path = require('path');
 
 const pathName = path.join(__dirname, 'templates');
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.sendFile(`${pathName}/index.html`);
